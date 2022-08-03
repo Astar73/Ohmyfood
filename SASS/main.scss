@@ -13,17 +13,29 @@ $colour-secondary : #FF79DA;
 $colour-accent : #99E2D0;
 
 body {
-    margin: 15px;
-    font-family: 'Roboto', sans-serif;
-}
+    font-family: 'Roboto', sans-serif; }
 
-header {
+img {
+        width: 100%;
+        height: auto; }
+
+.heading {
     display: flex;
     padding: 15px;
     justify-content: center;
-}
+    &__logo {
+        width: 45%;
+    } }
 
-img {
-    width: 100%;
-    height: auto; }
+
+
+.location-box {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 125px 15px 100px;
+    align-items: baseline;
+    background-color: #e6e6e6;
+    &__city {      
+        font-weight: bold;
+    } }
 

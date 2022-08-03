@@ -10,19 +10,32 @@
 }
 
 body {
-  margin: 15px;
   font-family: "Roboto", sans-serif;
-}
-
-header {
-  display: flex;
-  padding: 15px;
-  justify-content: center;
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+.heading {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+}
+.heading__logo {
+  width: 45%;
+}
+
+.location-box {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px 125px 15px 100px;
+  align-items: baseline;
+  background-color: #e6e6e6;
+}
+.location-box__city {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
