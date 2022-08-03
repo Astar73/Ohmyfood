@@ -5,10 +5,25 @@
 /* font-family: 'Shrikhand', cursive; */
 
 /* box-sizing est appliqué à tous les éléments */
-* { 
-    box-sizing: border-box; }
+* { box-sizing: border-box; }
 
  // Selection de la charte de couleur du site //
 $colour-primary : #9356DC;
 $colour-secondary : #FF79DA;
 $colour-accent : #99E2D0;
+
+body {
+    margin: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: auto; }
+
