@@ -17,7 +17,7 @@ $colour-accent : #99E2D0;
 @mixin heading-title {
     font-size: 1.7rem;
     font-weight: bold;
-    padding: 10px 30px;    
+    padding: 10px 20px; 
 }
 
 
@@ -28,8 +28,8 @@ body {
 }
 
 img {
-        width: 100%;
-        height: auto; 
+    width: 100%;
+    height: auto; 
 }
 
 .heading {
@@ -58,7 +58,6 @@ img {
     background-color: #f2f2f2;
     &__title {
         @include heading-title();
-        margin: 0px 60px;
     }
     &__text {
         font-size: 1.3rem;
@@ -76,6 +75,45 @@ img {
         background-color: mediumorchid;
         box-shadow: darkgrey 0px 5px 10px;    
     } 
+}
+
+h2 {
+    @include heading-title();
+    margin-top: 50px;
+}
+
+aside {
+    height: 350px;
+}
+
+.btn {
+    display: flex;
+    width: 88%;
+    margin: 20px 0px 20px 32px;
+    font-size: 1rem;
+    padding: 30px 85px;
+    border: none;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: darkgrey 0px 5px 10px;   
+    &__number {
+        font-size: 1rem;
+        padding: 4px 9px;
+        border-radius: 20px;
+        background-color: $colour-primary;
+        color: white;
+        position: absolute;
+        left: 70px;
+        margin: -50px;
+    }
+    &__icon {
+        position: absolute;
+        font-size: 1.3rem;
+        left: 70px;
+    }
+    &__text {
+        font-weight: bold;
+    }
 }
 
 

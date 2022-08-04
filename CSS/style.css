@@ -46,8 +46,7 @@ img {
 .reservation__title {
   font-size: 1.7rem;
   font-weight: bold;
-  padding: 10px 30px;
-  margin: 0px 60px;
+  padding: 10px 20px;
 }
 .reservation__text {
   font-size: 1.3rem;
@@ -64,6 +63,47 @@ img {
   color: white;
   background-color: mediumorchid;
   box-shadow: darkgrey 0px 5px 10px;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+
+aside {
+  height: 350px;
+}
+
+.btn {
+  display: flex;
+  width: 88%;
+  margin: 20px 0px 20px 32px;
+  font-size: 1rem;
+  padding: 30px 85px;
+  border: none;
+  border-radius: 20px;
+  align-items: center;
+  box-shadow: darkgrey 0px 5px 10px;
+}
+.btn__number {
+  font-size: 1rem;
+  padding: 4px 9px;
+  border-radius: 20px;
+  background-color: #9356DC;
+  color: white;
+  position: absolute;
+  left: 70px;
+  margin: -50px;
+}
+.btn__icon {
+  position: absolute;
+  font-size: 1.3rem;
+  left: 70px;
+}
+.btn__text {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
