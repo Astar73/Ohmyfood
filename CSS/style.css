@@ -32,7 +32,7 @@ img {
   justify-content: space-evenly;
   padding: 15px 125px 15px 100px;
   align-items: baseline;
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
 }
 .location-container__city {
   font-weight: bold;
@@ -62,7 +62,7 @@ img {
   font-size: 1.1rem;
   color: #fff;
   background: linear-gradient(360deg, #9356DC, #FF79DA);
-  box-shadow: darkgrey 0px 5px 10px;
+  box-shadow: #b3b3b3 0px 5px 10px;
 }
 
 h2 {
@@ -85,7 +85,8 @@ aside {
   border: none;
   border-radius: 20px;
   align-items: center;
-  box-shadow: darkgrey 0px 5px 10px;
+  background-color: #f2f2f2;
+  box-shadow: #b3b3b3 0px 5px 10px;
 }
 .btn__number {
   font-size: 1rem;
@@ -119,7 +120,7 @@ section {
   height: 265px;
   margin: auto;
   border-radius: 15px;
-  box-shadow: darkgrey 0px 3px 5px;
+  box-shadow: #b3b3b3 0px 5px 10px;
   text-decoration: none;
   color: black;
 }
@@ -146,6 +147,28 @@ section {
 .card__like-btn {
   border: none;
   font-size: 1.6rem;
+}
+
+.footer {
+  height: 250px;
+  padding: 20px;
+  background-color: #333333;
+  color: #fff;
+}
+.footer__resto, .footer__partner {
+  display: flex;
+}
+.footer__resto, .footer__partner, .footer__mention, .footer__contact {
+  margin: 15px 0px;
+}
+
+.logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+  padding: 10px 0px;
+}
+.logo--white {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

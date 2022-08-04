@@ -10,7 +10,7 @@
  // Selection de la charte de couleur du site //
 $colour-primary : #9356DC;
 $colour-secondary : #FF79DA;
-$colour-accent : #99E2D0;
+$colour-tertiary : #99E2D0;
 $colour-white : #fff;
 
 
@@ -21,8 +21,15 @@ $colour-white : #fff;
     padding: 10px 20px; 
 }
 
+@mixin shadow {
+    box-shadow: darken($color: $colour-white, $amount: 30%) 0px 5px 10px;
+}
 
+@mixin background {
+    background-color: darken($color: $colour-white, $amount: 5%);    
+}
 // Fin des Mixins //
+
 
 body {
     font-family: 'Roboto', sans-serif; 
@@ -47,7 +54,7 @@ img {
     justify-content: space-evenly;
     padding: 15px 125px 15px 100px;
     align-items: baseline;
-    background-color: #e6e6e6;
+    @include background;
     &__city {      
         font-weight: bold;
     } 
@@ -56,7 +63,7 @@ img {
 .reservation {
     text-align: center;
     padding: 40px 30px;
-    background-color: #f2f2f2;
+    @include background();
     &__title {
         @include heading-title();
     }
@@ -74,7 +81,7 @@ img {
         font-size: 1.1rem;
         color: $colour-white;
         background: linear-gradient(360deg, $colour-primary, $colour-secondary);
-        box-shadow: darkgrey 0px 5px 10px;    
+        @include shadow();   
     } 
 }
 
@@ -96,7 +103,8 @@ aside {
     border: none;
     border-radius: 20px;
     align-items: center;
-    box-shadow: darkgrey 0px 5px 10px;   
+    @include background();
+    @include shadow();   
     &__number {
         font-size: 1rem;
         padding: 4px 9px;
@@ -122,7 +130,7 @@ section {
     flex-direction: column;
     height: 1400px;
     padding: 50px 0px;
-    background-color: #f2f2f2;
+    @include background();
 }
 
 .card {
@@ -130,7 +138,7 @@ section {
     height: 265px;
     margin: auto;
     border-radius: 15px;
-    box-shadow: darkgrey 0px 3px 5px;
+    @include shadow(); 
     text-decoration: none;
     color: black;    
     &__image {
@@ -159,6 +167,27 @@ section {
     }
 }
 
+.footer {
+    height: 250px;
+    padding: 20px;
+    background-color: darken($color: $colour-white, $amount: 80%);
+    color: $colour-white;
+    &__resto, &__partner {
+        display: flex;
+    }
+    &__resto, &__partner, &__mention, &__contact {
+        margin: 15px 0px;
+    }
+}
+
+.logo {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.2rem;
+    padding: 10px 0px;
+    &--white {
+        color: $colour-white;
+    }
+}
 
 
 
