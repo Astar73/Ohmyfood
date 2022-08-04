@@ -11,6 +11,7 @@
 $colour-primary : #9356DC;
 $colour-secondary : #FF79DA;
 $colour-accent : #99E2D0;
+$colour-white : #fff;
 
 
 // Début des Mixins //
@@ -71,20 +72,19 @@ img {
         border: none;
         border-radius: 30px;
         font-size: 1.1rem;
-        color: white;
-        background-color: mediumorchid;
+        color: $colour-white;
+        background: linear-gradient(360deg, $colour-primary, $colour-secondary);
         box-shadow: darkgrey 0px 5px 10px;    
     } 
 }
 
 h2 {
     @include heading-title();
-    padding: 50px 20px 20px 20px;
 }
 
 aside {
-    height: 400px;
-    margin-bottom: 50px;
+    height: 370px;
+    margin: 50px 0px;
 }
 
 .btn {
@@ -102,7 +102,7 @@ aside {
         padding: 4px 9px;
         border-radius: 20px;
         background-color: $colour-primary;
-        color: white;
+        color: $colour-white;
         position: absolute;
         left: 70px;
         margin: -50px;
@@ -120,14 +120,14 @@ aside {
 section {
     display: flex;
     flex-direction: column;
-    height: 1200px;
-    justify-content: space-evenly;
+    height: 1400px;
+    padding: 50px 0px;
     background-color: #f2f2f2;
 }
 
 .card {
     width: 90%;
-    height: 250px;
+    height: 265px;
     margin: auto;
     border-radius: 15px;
     box-shadow: darkgrey 0px 3px 5px;
@@ -140,6 +140,22 @@ section {
     }
     &__content {
         display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        &__text {
+            font-size: 1.2rem; 
+        }
+    }
+    &__title {
+        font-weight: bold;
+        margin: 5px;
+    }
+    &__location {
+        margin: 5px;
+    }
+    &__like-btn {
+        border: none;
+        font-size: 1.6rem;
     }
 }
 

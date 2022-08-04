@@ -60,8 +60,8 @@ img {
   border: none;
   border-radius: 30px;
   font-size: 1.1rem;
-  color: white;
-  background-color: mediumorchid;
+  color: #fff;
+  background: linear-gradient(360deg, #9356DC, #FF79DA);
   box-shadow: darkgrey 0px 5px 10px;
 }
 
@@ -69,12 +69,11 @@ h2 {
   font-size: 1.7rem;
   font-weight: bold;
   padding: 10px 20px;
-  padding: 50px 20px 20px 20px;
 }
 
 aside {
-  height: 400px;
-  margin-bottom: 50px;
+  height: 370px;
+  margin: 50px 0px;
 }
 
 .btn {
@@ -93,7 +92,7 @@ aside {
   padding: 4px 9px;
   border-radius: 20px;
   background-color: #9356DC;
-  color: white;
+  color: #fff;
   position: absolute;
   left: 70px;
   margin: -50px;
@@ -110,14 +109,14 @@ aside {
 section {
   display: flex;
   flex-direction: column;
-  height: 1200px;
-  justify-content: space-evenly;
+  height: 1400px;
+  padding: 50px 0px;
   background-color: #f2f2f2;
 }
 
 .card {
   width: 90%;
-  height: 250px;
+  height: 265px;
   margin: auto;
   border-radius: 15px;
   box-shadow: darkgrey 0px 3px 5px;
@@ -131,6 +130,22 @@ section {
 }
 .card__content {
   display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card__content__text {
+  font-size: 1.2rem;
+}
+.card__title {
+  font-weight: bold;
+  margin: 5px;
+}
+.card__location {
+  margin: 5px;
+}
+.card__like-btn {
+  border: none;
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
