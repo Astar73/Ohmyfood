@@ -40,7 +40,7 @@ img {
 
 .reservation {
   text-align: center;
-  padding: 30px;
+  padding: 40px 30px;
   background-color: #f2f2f2;
 }
 .reservation__title {
@@ -69,11 +69,12 @@ h2 {
   font-size: 1.7rem;
   font-weight: bold;
   padding: 10px 20px;
-  margin-top: 50px;
+  padding: 50px 20px 20px 20px;
 }
 
 aside {
-  height: 350px;
+  height: 400px;
+  margin-bottom: 50px;
 }
 
 .btn {
@@ -104,6 +105,32 @@ aside {
 }
 .btn__text {
   font-weight: bold;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 1200px;
+  justify-content: space-evenly;
+  background-color: #f2f2f2;
+}
+
+.card {
+  width: 90%;
+  height: 250px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: darkgrey 0px 3px 5px;
+  text-decoration: none;
+  color: black;
+}
+.card__image {
+  border-radius: 15px 15px 0 0;
+  height: 70%;
+  object-fit: cover;
+}
+.card__content {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
