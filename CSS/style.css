@@ -27,15 +27,43 @@ img {
   width: 45%;
 }
 
-.location-box {
+.location-container {
   display: flex;
   justify-content: space-evenly;
   padding: 15px 125px 15px 100px;
   align-items: baseline;
   background-color: #e6e6e6;
 }
-.location-box__city {
+.location-container__city {
   font-weight: bold;
+}
+
+.reservation {
+  text-align: center;
+  padding: 30px;
+  background-color: #f2f2f2;
+}
+.reservation__title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin: 0px 60px;
+}
+.reservation__text {
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding: 10px 0px;
+}
+.reservation__btn {
+  width: 70%;
+  margin: 15px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: mediumorchid;
+  box-shadow: darkgrey 0px 5px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
