@@ -22,7 +22,7 @@ $colour-white : #fff;
 }
 
 @mixin shadow {
-    box-shadow: darken($color: $colour-white, $amount: 30%) 0px 5px 10px;
+    box-shadow: darken($color: $colour-white, $amount: 20%) 0px 5px 10px;
 }
 
 @mixin background {
@@ -140,7 +140,7 @@ section {
     border-radius: 15px;
     @include shadow(); 
     text-decoration: none;
-    color: black;    
+    color: darken($color: $colour-white, $amount: 100%);    
     &__image {
         border-radius: 15px 15px 0 0;
         height: 70%;
