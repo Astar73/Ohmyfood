@@ -139,9 +139,20 @@ section {
     @include background();
 }
 
+.new {
+    position: absolute;
+    right: 20px;    
+    margin: 15px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    @include background($colour-tertiary);
+    color: darken($color: $colour-tertiary, $amount: 40%);
+    font-weight: bold;
+}
+
 .card {
     width: 90%;
-    height: 265px;
+    height: 275px;
     margin: auto;
     border-radius: 15px;
     @include shadow(); 
@@ -156,12 +167,12 @@ section {
         display: flex;
         justify-content: space-between;
         padding: 10px;
-        &__text {
-            font-size: 1.2rem; 
-        }
+        font-size: 1.2rem; 
+        
     }
     &__title {
-        font-weight: bold;
+        font-weight: 900;
+        font-size: 1.3rem;
         margin: 5px;
     }
     &__location {
@@ -170,6 +181,7 @@ section {
     &__like-btn {
         border: none;
         font-size: 1.6rem;
+        font-stretch: normal;
     }
 }
 

@@ -118,9 +118,20 @@ section {
   background-color: #f2f2f2;
 }
 
+.new {
+  position: absolute;
+  right: 20px;
+  margin: 15px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #85dcc7;
+  color: #278870;
+  font-weight: bold;
+}
+
 .card {
   width: 90%;
-  height: 265px;
+  height: 275px;
   margin: auto;
   border-radius: 15px;
   box-shadow: #d9d9d9 0px 7px 10px;
@@ -136,12 +147,11 @@ section {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-}
-.card__content__text {
   font-size: 1.2rem;
 }
 .card__title {
-  font-weight: bold;
+  font-weight: 900;
+  font-size: 1.3rem;
   margin: 5px;
 }
 .card__location {
@@ -150,6 +160,7 @@ section {
 .card__like-btn {
   border: none;
   font-size: 1.6rem;
+  font-stretch: normal;
 }
 
 .footer {
