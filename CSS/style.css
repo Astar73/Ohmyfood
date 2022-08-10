@@ -20,22 +20,25 @@ img {
 
 .heading {
   display: flex;
-  padding: 15px;
   justify-content: center;
 }
 .heading__logo {
-  width: 45%;
+  background-color: #fff;
+  padding: 25px 115px 15px 115px;
+  box-shadow: #d9d9d9 0px 5px 5px;
 }
 
 .location-container {
   display: flex;
   justify-content: space-evenly;
-  padding: 15px 125px 15px 100px;
+  padding: 25px 125px 25px 100px;
   align-items: baseline;
-  background-color: #f2f2f2;
+  background-color: #e6e6e6;
 }
 .location-container__city {
+  font-size: 1.1rem;
   font-weight: bold;
+  color: #404040;
 }
 
 .reservation {
@@ -44,8 +47,8 @@ img {
   background-color: #f2f2f2;
 }
 .reservation__title {
-  font-size: 1.7rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 900;
   padding: 10px 20px;
 }
 .reservation__text {
@@ -55,19 +58,19 @@ img {
 }
 .reservation__btn {
   width: 70%;
-  margin: 15px;
-  padding: 15px;
+  margin: 25px;
+  padding: 20px 15px;
   border: none;
   border-radius: 30px;
   font-size: 1.1rem;
   color: #fff;
-  background: linear-gradient(360deg, #9356DC, #FF79DA);
-  box-shadow: #cccccc 0px 5px 10px;
+  background: linear-gradient(355deg, #9356DC, #FF79DA);
+  box-shadow: #d9d9d9 0px 7px 10px;
 }
 
 h2 {
-  font-size: 1.7rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 900;
   padding: 10px 20px;
 }
 
@@ -86,7 +89,7 @@ aside {
   border-radius: 20px;
   align-items: center;
   background-color: #f2f2f2;
-  box-shadow: #cccccc 0px 5px 10px;
+  box-shadow: #d9d9d9 0px 7px 10px;
 }
 .btn__number {
   font-size: 1rem;
@@ -120,7 +123,7 @@ section {
   height: 265px;
   margin: auto;
   border-radius: 15px;
-  box-shadow: #cccccc 0px 5px 10px;
+  box-shadow: #d9d9d9 0px 7px 10px;
   text-decoration: none;
   color: black;
 }
