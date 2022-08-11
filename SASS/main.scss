@@ -7,28 +7,31 @@
 /* box-sizing est appliqué à tous les éléments */
 * { box-sizing: border-box; }
 
- // Selection de la charte de couleur du site //
+
+//==================== Début des VARIABLES ====================//
+//========= Selection de la charte de couleur du site =========//
 $colour-primary : #9356DC;
 $colour-secondary : #FF79DA;
 $colour-tertiary : #99E2D0;
 $colour-white : #fff;
+//===================== Fin des VARIABLES  ====================//
 
 
-// Début des Mixins //
+//===================== Début des MIXINS  =====================//
 @mixin heading-title {
-    font-size: 1.7rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 900;
     padding: 10px 20px; 
 }
 
-@mixin shadow {
-    box-shadow: darken($color: $colour-white, $amount: 20%) 0px 5px 10px;
+@mixin background($colour: $colour-white, $amount: 5%) {    
+    background-color: darken($colour, $amount);    
 }
 
-@mixin background {
-    background-color: darken($color: $colour-white, $amount: 5%);    
+@mixin shadow($colour: $colour-white, $size:0px 7px 10px) {
+    box-shadow: darken($colour, 15%) $size;
 }
-// Fin des Mixins //
+//====================== Fin des MIXINS ======================//
 
 
 body {
@@ -42,28 +45,31 @@ img {
 
 .heading {
     display: flex;
-    padding: 15px;
     justify-content: center;
     &__logo {
-        width: 45%; 
-    } 
+        background-color: $colour-white; 
+        padding: 25px 115px 15px 115px;
+        @include shadow($colour-white, 0px 5px 5px);
+        } 
 }
 
 .location-container {
     display: flex;
     justify-content: space-evenly;
-    padding: 15px 125px 15px 100px;
+    padding: 25px 125px 25px 100px;
     align-items: baseline;
-    @include background;
+    @include background($colour-white, 10%);
     &__city {      
+        font-size: 1.1rem;
         font-weight: bold;
+        color: darken($color: $colour-white, $amount: 75%);
     } 
 }
 
 .reservation {
     text-align: center;
     padding: 40px 30px;
-    @include background();
+    @include background;
     &__title {
         @include heading-title();
     }
@@ -74,13 +80,13 @@ img {
     }
     &__btn {
         width: 70%;
-        margin: 15px;
-        padding: 15px;
+        margin: 25px;
+        padding: 20px 15px;
         border: none;
         border-radius: 30px;
         font-size: 1.1rem;
         color: $colour-white;
-        background: linear-gradient(360deg, $colour-primary, $colour-secondary);
+        background: linear-gradient(355deg, $colour-primary, $colour-secondary);
         @include shadow();   
     } 
 }
@@ -133,9 +139,20 @@ section {
     @include background();
 }
 
+.new {
+    position: absolute;
+    right: 20px;    
+    margin: 15px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    @include background($colour-tertiary);
+    color: darken($color: $colour-tertiary, $amount: 40%);
+    font-weight: bold;
+}
+
 .card {
     width: 90%;
-    height: 265px;
+    height: 275px;
     margin: auto;
     border-radius: 15px;
     @include shadow(); 
@@ -150,12 +167,12 @@ section {
         display: flex;
         justify-content: space-between;
         padding: 10px;
-        &__text {
-            font-size: 1.2rem; 
-        }
+        font-size: 1.2rem; 
+        
     }
     &__title {
-        font-weight: bold;
+        font-weight: 900;
+        font-size: 1.3rem;
         margin: 5px;
     }
     &__location {
@@ -164,6 +181,7 @@ section {
     &__like-btn {
         border: none;
         font-size: 1.6rem;
+        font-stretch: normal;
     }
 }
 
@@ -178,6 +196,9 @@ section {
     &__resto, &__partner, &__mention, &__contact {
         margin: 15px 0px;
     }
+    &__icon {
+        width: 8%;
+    }
 }
 
 .logo {
@@ -188,10 +209,3 @@ section {
         color: $colour-white;
     }
 }
-
-
-
-
-
-
-
