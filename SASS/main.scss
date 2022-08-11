@@ -99,7 +99,7 @@ img {
     } 
 }
 
-h2 {
+.section-title {
     @include heading-title();
 }
 
@@ -228,23 +228,32 @@ section {
 
 
 //===================== Début des MENUS  =====================//
-
-
 main {
     position: relative;    
     height: 1200px;
     bottom: 50px;
-    .container-card {    
+
+    .container {    
         @include background();
-        border-radius: 45px;
+        border-radius: 45px 45px 0px 0px;
     }
-    .card-heading {
+
+    .container-heading {
         display: flex;
         justify-content: space-around;
         font-family: 'Shrikhand', cursive;
         font-size: 1.9rem;
         padding: 40px 0px;
     }
+
+    .menu__title {
+        font-size: 1.1rem;
+        margin: 0px 20px;
+        padding-bottom: 10px;
+        border-bottom: 4px solid $colour-tertiary;
+        width: 10%;
+    }
+
     .card {
         height: 70px;        
         margin: 15px;
@@ -253,6 +262,7 @@ main {
             font-size: 1.1rem;
             font-weight: bold;
         }
+
         &__description {
             width: 90%;
             font-size: 0.9rem;
@@ -260,6 +270,7 @@ main {
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
         &__content {
             &__text {
                 width: 80%;
@@ -273,8 +284,8 @@ main {
             }
         }
     }
+    
     .reservation__btn {
         width: 50%;
     }
 }
-    

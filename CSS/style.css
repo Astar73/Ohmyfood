@@ -68,7 +68,7 @@ img {
   box-shadow: #d9d9d9 0px 7px 10px;
 }
 
-h2 {
+.section-title {
   font-size: 1.8rem;
   font-weight: 900;
   padding: 10px 20px;
@@ -199,16 +199,23 @@ main {
   height: 1200px;
   bottom: 50px;
 }
-main .container-card {
+main .container {
   background-color: #f2f2f2;
-  border-radius: 45px;
+  border-radius: 45px 45px 0px 0px;
 }
-main .card-heading {
+main .container-heading {
   display: flex;
   justify-content: space-around;
   font-family: "Shrikhand", cursive;
   font-size: 1.9rem;
   padding: 40px 0px;
+}
+main .menu__title {
+  font-size: 1.1rem;
+  margin: 0px 20px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #99E2D0;
+  width: 10%;
 }
 main .card {
   height: 70px;
