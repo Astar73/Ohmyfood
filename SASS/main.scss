@@ -18,13 +18,21 @@ $colour-white : #fff;
 
 
 //===================== Début des MIXINS  =====================//
+@function lightness-shift($colour){
+    @if (lightness($colour)>50%) {
+        @return lighten($colour,35%);   
+    }@else{
+        @return darken($colour,10%);
+    }
+}
+
 @mixin heading-title {
     font-size: 1.8rem;
     font-weight: 900;
     padding: 10px 20px; 
 }
 
-@mixin background($colour: $colour-white, $amount: 5%) {    
+@mixin background($colour:$colour-white, $amount: 5%) {    
     background-color: darken($colour, $amount);    
 }
 
@@ -125,10 +133,17 @@ aside {
         position: absolute;
         font-size: 1.3rem;
         left: 70px;
+        
     }
     &__text {
         font-weight: bold;
     }
+}
+
+.btn:hover {
+    @include background(lightness-shift($colour-primary), 0%);
+    @include shadow($colour-white, 0px 12px 15px);
+    color: $colour-primary;      
 }
 
 section {

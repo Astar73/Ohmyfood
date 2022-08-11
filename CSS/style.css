@@ -110,6 +110,12 @@ aside {
   font-weight: bold;
 }
 
+.btn:hover {
+  background-color: #f2eafb;
+  box-shadow: #d9d9d9 0px 12px 15px;
+  color: #9356DC;
+}
+
 section {
   display: flex;
   flex-direction: column;
