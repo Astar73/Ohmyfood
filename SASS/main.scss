@@ -238,26 +238,31 @@ main {
         margin: 15px;
         background-color: $colour-white;
         &__title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
         }
         &__description {
-            font-size: 1rem;
+            width: 90%;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        &__price {
-            font-weight: bold;
+        &__content {
+            &__text {
+                width: 80%;
+            }
+            &__price {
+                font-size: 1.1rem;
+                font-weight: bold;
+                text-align: center;
+                width: 15%;
+                margin: 30px 5px 5px 0px;
+            }
         }
     }
     .reservation__btn {
-        width: 70%;
-        margin: 25px;
-        padding: 20px 15px;
-        border: none;
-        border-radius: 30px;
-        font-size: 1.1rem;
-        color: $colour-white;
-        background: linear-gradient(355deg, $colour-primary, $colour-secondary);
-        @include shadow();   
-    } 
+        width: 50%;
+    }
 }
     
