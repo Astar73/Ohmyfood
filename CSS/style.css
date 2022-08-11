@@ -195,44 +195,48 @@ section {
 }
 
 main {
-  height: 1500px;
-  background-color: #f2f2f2;
+  position: relative;
+  height: 1200px;
+  bottom: 50px;
 }
-
-.menu .card-heading {
+main .container-card {
+  background-color: #f2f2f2;
+  border-radius: 45px;
+}
+main .card-heading {
   display: flex;
   justify-content: space-around;
   font-family: "Shrikhand", cursive;
   font-size: 1.9rem;
-  margin: 40px 0px;
+  padding: 40px 0px;
 }
-.menu .card {
+main .card {
   height: 70px;
   margin: 15px;
   background-color: #fff;
 }
-.menu .card__title {
+main .card__title {
   font-size: 1.1rem;
   font-weight: bold;
 }
-.menu .card__description {
+main .card__description {
   width: 90%;
   font-size: 0.9rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .card__content__text {
+main .card__content__text {
   width: 80%;
 }
-.menu .card__content__price {
+main .card__content__price {
   font-size: 1.1rem;
   font-weight: bold;
   text-align: center;
   width: 15%;
   margin: 30px 5px 5px 0px;
 }
-.menu .reservation__btn {
+main .reservation__btn {
   width: 50%;
 }
 

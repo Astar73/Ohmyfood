@@ -228,17 +228,22 @@ section {
 
 
 //===================== Début des MENUS  =====================//
-main {    
-    height: 1500px;
-    @include background();
-}
-.menu {
+
+
+main {
+    position: relative;    
+    height: 1200px;
+    bottom: 50px;
+    .container-card {    
+        @include background();
+        border-radius: 45px;
+    }
     .card-heading {
         display: flex;
         justify-content: space-around;
         font-family: 'Shrikhand', cursive;
         font-size: 1.9rem;
-        margin: 40px 0px;
+        padding: 40px 0px;
     }
     .card {
         height: 70px;        
