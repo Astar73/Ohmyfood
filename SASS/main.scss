@@ -240,7 +240,7 @@ section {
 //===================== Début des MENUS  =====================//
 main {
     position: relative;    
-    height: 1200px;
+    height: 1155px;
     bottom: 50px;
 
     .container {    
@@ -295,6 +295,10 @@ main {
         }
     }
     
+    .container-btn {
+        display: flex;
+        justify-content: center;
+    }
     .reservation__btn {
         width: 50%;
     }

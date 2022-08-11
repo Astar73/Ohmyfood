@@ -201,7 +201,7 @@ section {
 
 main {
   position: relative;
-  height: 1200px;
+  height: 1155px;
   bottom: 50px;
 }
 main .container {
@@ -247,6 +247,10 @@ main .card__content__price {
   text-align: center;
   width: 15%;
   margin: 30px 5px 5px 0px;
+}
+main .container-btn {
+  display: flex;
+  justify-content: center;
 }
 main .reservation__btn {
   width: 50%;
