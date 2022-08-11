@@ -18,14 +18,17 @@ img {
   height: auto;
 }
 
-.heading {
-  display: flex;
-  justify-content: center;
-}
 .heading__logo {
   background-color: #fff;
   padding: 25px 115px 15px 115px;
   box-shadow: #d9d9d9 0px 5px 5px;
+}
+.heading__btn-return {
+  position: absolute;
+  top: 32px;
+  left: 30px;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .location-container {
@@ -66,6 +69,9 @@ img {
   color: #fff;
   background: linear-gradient(355deg, #9356DC, #FF79DA);
   box-shadow: #d9d9d9 0px 7px 10px;
+}
+.reservation__btn:hover {
+  opacity: 0.85;
 }
 
 .section-title {
@@ -109,7 +115,6 @@ aside {
 .btn__text {
   font-weight: bold;
 }
-
 .btn:hover {
   background-color: #f2eafb;
   box-shadow: #d9d9d9 0px 12px 15px;
@@ -208,11 +213,11 @@ main .container-heading {
   justify-content: space-around;
   font-family: "Shrikhand", cursive;
   font-size: 1.9rem;
-  padding: 40px 0px;
+  padding: 40px 0px 0px;
 }
 main .menu__title {
   font-size: 1.1rem;
-  margin: 0px 20px;
+  margin: 50px 20px 0px;
   padding-bottom: 10px;
   border-bottom: 4px solid #99E2D0;
   width: 10%;
