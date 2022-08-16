@@ -9,6 +9,48 @@
   box-sizing: border-box;
 }
 
+.loader {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #fff;
+  opacity: 85%;
+  z-index: 1;
+  transition: transform 0s 5s;
+  transform: scale(0);
+}
+.loader__dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 7px;
+  background: linear-gradient(355deg, #9356DC, #FF79DA);
+  animation: dots 800ms backwards infinite ease-in-out alternate;
+}
+.loader__dot--1 {
+  animation-delay: 200ms;
+}
+.loader__dot--2 {
+  animation-delay: 400ms;
+}
+.loader__dot--3 {
+  animation-delay: 600ms;
+}
+.loader__dot--4 {
+  animation-delay: 800ms;
+}
+
+@keyframes dots {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -29,6 +71,10 @@ img {
   left: 30px;
   font-size: 1.5rem;
   color: black;
+}
+.heading__background-img {
+  height: 300px;
+  object-fit: cover;
 }
 
 .location-container {
@@ -72,6 +118,7 @@ img {
 }
 .reservation__btn:hover {
   opacity: 0.85;
+  box-shadow: #99E2D0 0px 3px 7px;
 }
 
 .section-title {
@@ -199,6 +246,11 @@ section {
   color: #fff;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 main {
   position: relative;
   height: 1155px;
@@ -227,6 +279,9 @@ main .card {
   margin: 15px;
   background-color: #fff;
 }
+main .card:hover {
+  cursor: pointer;
+}
 main .card__title {
   font-size: 1.1rem;
   font-weight: bold;
@@ -246,7 +301,7 @@ main .card__content__price {
   font-weight: bold;
   text-align: center;
   width: 15%;
-  margin: 30px 5px 5px 0px;
+  margin: 24px 0px 0px 0px;
 }
 main .container-btn {
   display: flex;

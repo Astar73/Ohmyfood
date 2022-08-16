@@ -34,22 +34,83 @@ $background-rose : linear-gradient(355deg, $colour-primary, $colour-secondary);
 }
 
 @mixin background($colour:$colour-white, $amount: 5%) {    
-    background-color: darken($colour, $amount);    
+    background-color: darken($colour, $amount); 
 }
+
+
 
 @mixin shadow($colour: $colour-white, $size:0px 7px 10px) {
     box-shadow: darken($colour, 15%) $size;
 }
 //====================== Fin des MIXINS ======================//
 
+//====================== Début ANIMATIONS ======================//
+$anim-dur: 800ms;
+$anim-delay: $anim-dur / 4;
+
+.loader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: $colour-white;
+    opacity: 85%;
+    z-index: 1;
+    transition: transform 0s 5s;
+    transform: scale(0);
+    &__dot {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin: 7px;
+        background: $background-rose;
+        animation: dots $anim-dur backwards infinite ease-in-out alternate;
+        @for $anim-dot from 1 through 4 {
+            &--#{$anim-dot} {
+                animation-delay: $anim-delay * $anim-dot;
+            }
+        }
+
+    }
+}
+
+@keyframes dots {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//====================== Fin ANIMATIONS ======================//
 
 body {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
 }
 
 img {
     width: 100%;
-    height: auto; 
+    height: auto;
 }
 
 .heading {
@@ -64,6 +125,10 @@ img {
         left: 30px;
         font-size: 1.5rem;
         color: black;
+    }
+    &__background-img {
+        height: 300px;
+        object-fit: cover;
     }
 }
 
@@ -104,6 +169,7 @@ img {
         @include shadow(); 
         &:hover {
             opacity: 0.85;
+            box-shadow: $colour-tertiary 0px 3px 7px;
         }  
     } 
 }
@@ -175,14 +241,14 @@ section {
     font-weight: bold;
 }
 
-.card {
+.card {    
     width: 90%;
     height: 275px;
     margin: auto;
     border-radius: 15px;
     @include shadow(); 
     text-decoration: none;
-    color: darken($color: $colour-white, $amount: 100%);    
+    color: darken($color: $colour-white, $amount: 100%);
     &__image {
         border-radius: 15px 15px 0 0;
         height: 70%;
@@ -235,6 +301,10 @@ section {
     }
 }
 
+a {
+    color: $colour-white;
+    text-decoration: none;
+}
 
 
 //===================== Début des MENUS  =====================//
@@ -268,6 +338,9 @@ main {
         height: 70px;        
         margin: 15px;
         background-color: $colour-white;
+        &:hover {
+            cursor: pointer;
+        }
         &__title {
             font-size: 1.1rem;
             font-weight: bold;
@@ -290,11 +363,11 @@ main {
                 font-weight: bold;
                 text-align: center;
                 width: 15%;
-                margin: 30px 5px 5px 0px;
+                margin: 24px 0px 0px 0px;
             }
         }
     }
-    
+
     .container-btn {
         display: flex;
         justify-content: center;
