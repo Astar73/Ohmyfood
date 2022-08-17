@@ -9,12 +9,13 @@
 
 
 //==================== Début des VARIABLES ====================//
-//========= Selection de la charte de couleur du site =========//
 $colour-primary : #9356DC;
 $colour-secondary : #FF79DA;
 $colour-tertiary : #99E2D0;
 $colour-white : #fff;
 $background-rose : linear-gradient(355deg, $colour-primary, $colour-secondary);
+$anim-dur: 800ms;
+$anim-delay: $anim-dur / 4;
 //===================== Fin des VARIABLES  ====================//
 
 
@@ -37,32 +38,27 @@ $background-rose : linear-gradient(355deg, $colour-primary, $colour-secondary);
     background-color: darken($colour, $amount); 
 }
 
-
-
 @mixin shadow($colour: $colour-white, $size:0px 7px 10px) {
     box-shadow: darken($colour, 15%) $size;
 }
 //====================== Fin des MIXINS ======================//
 
 
-//====================== Début ANIMATIONS ======================//
-$anim-dur: 800ms;
-$anim-delay: $anim-dur / 4;
 
-//===== Début Loader =====//
+//===== Début Animation Loader =====//
 .loader {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     position: absolute;
     background-color: $colour-white;
     opacity: 85%;
     z-index: 1;
     transition: transform 0s 5s;
-    transform: scale(0);
-    &__dot {
+    transform: scaleX(0);
+        &__dot {
         width: 25px;
         height: 25px;
         border-radius: 50%;
@@ -85,17 +81,22 @@ $anim-delay: $anim-dur / 4;
         transform: scale(1);
     }
 }
-//===== Fin Loader =====//
+//===== Fin Animation Loader =====//
 
-//====================== Fin ANIMATIONS ======================//
+
 
 body {
     font-family: 'Roboto', sans-serif;
+    height: 100%;
 }
 
 img {
     width: 100%;
     height: auto;
+}
+
+a {    
+    text-decoration: none;
 }
 
 .heading {
@@ -198,7 +199,7 @@ aside {
     &__text {
         font-weight: bold;
     }
-    &:hover {
+    &:active {
         @include background(lightness-shift($colour-primary), 0%);
         @include shadow($colour-white, 0px 12px 15px);
         color: $colour-primary;      
@@ -229,9 +230,7 @@ section {
     height: 275px;
     margin: auto;
     border-radius: 15px;
-    @include shadow(); 
-    text-decoration: none;
-    color: darken($color: $colour-white, $amount: 100%);
+    @include shadow();    
     &__image {
         border-radius: 15px 15px 0 0;
         height: 70%;
@@ -241,8 +240,11 @@ section {
         display: flex;
         justify-content: space-between;
         padding: 10px;
-        font-size: 1.2rem; 
-        
+        font-size: 1.2rem;
+        &__text {
+            width: 100%; 
+            color: darken($color: $colour-white, $amount: 100%);           
+        }         
     }
     &__title {
         font-weight: 900;
@@ -255,9 +257,29 @@ section {
     &__like-btn {
         border: none;
         font-size: 1.6rem;
-        font-stretch: normal;
     }
 }
+
+
+
+//===== Début Animation Coeur Like =====//
+.fa-heart:active {
+    font-weight: 100;
+    background: linear-gradient(355deg, $colour-primary, $colour-secondary);
+    animation: heart-fill 1s forwards ease-in-out;
+}
+
+@keyframes heart-fill {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+//===== Début Animation Coeur Like =====//
+
+
 
 .footer {
     height: 250px;
@@ -284,19 +306,19 @@ section {
     }
 }
 
-a {
+footer a {
     color: $colour-white;
-    text-decoration: none;
 }
+
 
 
 //===================== Début des MENUS  =====================//
 main {
-    position: relative;    
+    position: relative;
     height: 1155px;
     bottom: 50px;
 
-    .container {    
+    .container {
         @include background();
         border-radius: 45px 45px 0px 0px;
     }
@@ -319,38 +341,42 @@ main {
 
     .card {
         display: flex;
-        height: 70px;        
+        height: 70px;
         margin: 15px;
         background-color: $colour-white;
+        animation: fadein 1900ms forwards ease-in-out;
+        opacity: 0;
         &:hover {
             cursor: pointer;
-            .card__add {              
-                transform: scaleX(1);
+            .card__add {
+                width: 50%;
             }
             .fa-circle-check {
+                color: $colour-white;
                 transform: rotate(360deg);
             }
         }
         &__add {
-            width: 20%;
+            width: 0%;
             height: 70px;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: $colour-tertiary;
             border-radius: 0 15px 15px 0;
-            transform-origin: right 50%;
-            transform: scaleX(0);
-            transition: transform 500ms ease-in-out;                   
+            transition: 0.3s linear 0s;
             & .fa-circle-check {
                 font-size: 1.8rem;
-                color: $colour-white;
-                transition: transform 500ms 300ms ease-in-out;                
+                color: transparent;
+                transition: transform 500ms 300ms ease-in-out;
             }
         }
         &__title {
             font-size: 1.1rem;
             font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &__description {
             width: 90%;
@@ -360,19 +386,66 @@ main {
             text-overflow: ellipsis;
         }
         &__content {
-            width: 80%;
+            width: 100%;
             &__text {
                 width: 80%;
             }
             &__price {
+                display: flex;
+                align-items: flex-end;
                 font-size: 1.1rem;
                 font-weight: bold;
-                text-align: center;
-                width: 15%;
-                margin: 24px 0px 0px 0px;
+                margin: 5px;
             }
         }        
     }
+    
+
+
+    //===== Début Animation FadeIn =====//
+    .fadein--1{
+        animation-delay: 100ms;
+    }
+    .fadein--2{
+        animation-delay: 300ms;
+    }
+    .fadein--3 {
+        animation-delay: 500ms;
+    }
+    .fadein--4 {
+        animation-delay: 700ms;
+    }
+    .fadein--5 {
+        animation-delay: 900ms;
+    }
+    .fadein--6 {
+        animation-delay: 1100ms;
+    }
+    .fadein--7 {
+        animation-delay: 1300ms;
+    }
+    .fadein--8 {
+        animation-delay: 1500ms;
+    }
+    .fadein--9 {
+        animation-delay: 1700ms;
+    }
+    .fadein--10 {
+        animation-delay: 1900ms;
+    }
+
+    @keyframes fadein {
+        0% {
+            transform: translateY(20px);
+        }
+        100% {
+            transform: translateY(0px);
+            opacity:1;
+        }
+    }
+    //===== Fin Animation FadeIn =====//
+
+
 
     .container-btn {
         display: flex;
