@@ -44,10 +44,12 @@ $background-rose : linear-gradient(355deg, $colour-primary, $colour-secondary);
 }
 //====================== Fin des MIXINS ======================//
 
+
 //====================== Début ANIMATIONS ======================//
 $anim-dur: 800ms;
 $anim-delay: $anim-dur / 4;
 
+//===== Début Loader =====//
 .loader {
     height: 100%;
     width: 100%;
@@ -72,7 +74,6 @@ $anim-delay: $anim-dur / 4;
                 animation-delay: $anim-delay * $anim-dot;
             }
         }
-
     }
 }
 
@@ -84,23 +85,7 @@ $anim-delay: $anim-dur / 4;
         transform: scale(1);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//===== Fin Loader =====//
 
 //====================== Fin ANIMATIONS ======================//
 
@@ -220,8 +205,6 @@ aside {
     }
 }
 
-
-
 section {
     display: flex;
     flex-direction: column;
@@ -335,17 +318,40 @@ main {
     }
 
     .card {
+        display: flex;
         height: 70px;        
         margin: 15px;
         background-color: $colour-white;
         &:hover {
             cursor: pointer;
+            .card__add {              
+                transform: scaleX(1);
+            }
+            .fa-circle-check {
+                transform: rotate(360deg);
+            }
+        }
+        &__add {
+            width: 20%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $colour-tertiary;
+            border-radius: 0 15px 15px 0;
+            transform-origin: right 50%;
+            transform: scaleX(0);
+            transition: transform 500ms ease-in-out;                   
+            & .fa-circle-check {
+                font-size: 1.8rem;
+                color: $colour-white;
+                transition: transform 500ms 300ms ease-in-out;                
+            }
         }
         &__title {
             font-size: 1.1rem;
             font-weight: bold;
         }
-
         &__description {
             width: 90%;
             font-size: 0.9rem;
@@ -353,8 +359,8 @@ main {
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         &__content {
+            width: 80%;
             &__text {
                 width: 80%;
             }
@@ -365,7 +371,7 @@ main {
                 width: 15%;
                 margin: 24px 0px 0px 0px;
             }
-        }
+        }        
     }
 
     .container-btn {

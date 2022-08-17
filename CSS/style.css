@@ -275,12 +275,36 @@ main .menu__title {
   width: 10%;
 }
 main .card {
+  display: flex;
   height: 70px;
   margin: 15px;
   background-color: #fff;
 }
 main .card:hover {
   cursor: pointer;
+}
+main .card:hover .card__add {
+  transform: scaleX(1);
+}
+main .card:hover .fa-circle-check {
+  transform: rotate(360deg);
+}
+main .card__add {
+  width: 20%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 500ms ease-in-out;
+}
+main .card__add .fa-circle-check {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 500ms 300ms ease-in-out;
 }
 main .card__title {
   font-size: 1.1rem;
@@ -292,6 +316,9 @@ main .card__description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+main .card__content {
+  width: 80%;
 }
 main .card__content__text {
   width: 80%;
