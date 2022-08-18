@@ -17,9 +17,9 @@
   align-items: center;
   position: absolute;
   background-color: #fff;
-  opacity: 85%;
+  opacity: 95%;
   z-index: 1;
-  transition: transform 0s 5s;
+  transition: transform 0s 3s;
   transform: scaleX(0);
 }
 .loader__dot {
@@ -53,7 +53,6 @@
 }
 body {
   font-family: "Roboto", sans-serif;
-  height: 100%;
 }
 
 img {
@@ -84,13 +83,14 @@ a {
 
 .location-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 25px 125px 25px 100px;
   align-items: baseline;
   background-color: #e6e6e6;
 }
 .location-container__city {
   font-size: 1.1rem;
+  margin-left: 10px;
   font-weight: bold;
   color: #404040;
 }
@@ -146,6 +146,7 @@ aside {
   border: none;
   border-radius: 20px;
   align-items: center;
+  position: relative;
   background-color: #f2f2f2;
   box-shadow: #d9d9d9 0px 7px 10px;
 }
@@ -156,13 +157,12 @@ aside {
   background-color: #9356DC;
   color: #fff;
   position: absolute;
-  left: 70px;
-  margin: -50px;
+  left: -10px;
 }
 .btn__icon {
   position: absolute;
   font-size: 1.3rem;
-  left: 70px;
+  left: 40px;
 }
 .btn__text {
   font-weight: bold;
@@ -181,9 +181,16 @@ section {
   background-color: #f2f2f2;
 }
 
+.container-card {
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .new {
   position: absolute;
-  right: 20px;
+  right: 10px;
   margin: 15px;
   padding: 10px 15px;
   border-radius: 3px;
@@ -193,6 +200,7 @@ section {
 }
 
 .card {
+  position: relative;
   width: 90%;
   height: 275px;
   margin: auto;
@@ -227,18 +235,24 @@ section {
   font-size: 1.6rem;
 }
 
-.fa-heart:active {
-  font-weight: 100;
-  background: linear-gradient(355deg, #9356DC, #FF79DA);
+.fa-heart:active, main .fa-heart:active {
+  font-weight: bold;
+  background: -webkit-linear-gradient(355deg, #9356DC, #FF79DA);
+  background: -moz-linear-gradient(355deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   animation: heart-fill 1s forwards ease-in-out;
+  transform-origin: bottom;
 }
 
 @keyframes heart-fill {
   from {
-    opacity: 0.1;
+    transform: scale(0.1);
   }
   to {
-    opacity: 1;
+    transform: scale(1);
   }
 }
 .footer {
@@ -272,7 +286,7 @@ footer a {
 
 main {
   position: relative;
-  height: 1155px;
+  height: auto;
   bottom: 50px;
 }
 main .container {
@@ -304,10 +318,10 @@ main .card {
 main .card:hover {
   cursor: pointer;
 }
-main .card:hover .card__add {
+main .card:active .card__add {
   width: 50%;
 }
-main .card:hover .fa-circle-check {
+main .card:active .fa-circle-check {
   color: #fff;
   transform: rotate(360deg);
 }
@@ -324,7 +338,7 @@ main .card__add {
 main .card__add .fa-circle-check {
   font-size: 1.8rem;
   color: transparent;
-  transition: transform 500ms 300ms ease-in-out;
+  transition: transform 500ms 100ms ease-in-out;
 }
 main .card__title {
   font-size: 1.1rem;
@@ -353,36 +367,54 @@ main .card__content__price {
   font-weight: bold;
   margin: 5px;
 }
-main .fadein--1 {
+main .container-btn {
+  display: flex;
+  justify-content: center;
+}
+main .reservation__btn {
+  width: 50%;
+}
+
+.fadein--1 {
   animation-delay: 100ms;
 }
-main .fadein--2 {
+
+.fadein--2 {
   animation-delay: 300ms;
 }
-main .fadein--3 {
+
+.fadein--3 {
   animation-delay: 500ms;
 }
-main .fadein--4 {
+
+.fadein--4 {
   animation-delay: 700ms;
 }
-main .fadein--5 {
+
+.fadein--5 {
   animation-delay: 900ms;
 }
-main .fadein--6 {
+
+.fadein--6 {
   animation-delay: 1100ms;
 }
-main .fadein--7 {
+
+.fadein--7 {
   animation-delay: 1300ms;
 }
-main .fadein--8 {
+
+.fadein--8 {
   animation-delay: 1500ms;
 }
-main .fadein--9 {
+
+.fadein--9 {
   animation-delay: 1700ms;
 }
-main .fadein--10 {
+
+.fadein--10 {
   animation-delay: 1900ms;
 }
+
 @keyframes fadein {
   0% {
     transform: translateY(20px);
@@ -392,12 +424,92 @@ main .fadein--10 {
     opacity: 1;
   }
 }
-main .container-btn {
-  display: flex;
-  justify-content: center;
-}
-main .reservation__btn {
-  width: 50%;
+@media screen and (min-width: 769px) {
+  .accueil .heading__logo {
+    display: flex;
+    width: 60%;
+    margin: 30px auto;
+    box-shadow: none;
+  }
+  .accueil .heading__background-img {
+    height: 500px;
+  }
+  .accueil .reservation__btn {
+    width: 30%;
+  }
+  .accueil aside {
+    height: auto;
+    width: 80%;
+    margin: 30px auto;
+  }
+  .accueil aside .btn {
+    display: inline-flex;
+    flex-direction: column;
+    width: 28%;
+    height: 150px;
+    padding: unset;
+    justify-content: space-evenly;
+  }
+  .accueil aside .btn__number {
+    position: unset;
+  }
+  .accueil aside .btn__icon {
+    position: unset;
+  }
+  .accueil section {
+    height: 1200px;
+    width: 80%;
+    margin: auto;
+    border-radius: 30px 30px 0 0;
+  }
+  .accueil section .container-card {
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .accueil section .container-card .card {
+    height: 450px;
+    width: 45%;
+  }
+  .accueil section .container-card .card__content {
+    height: 30%;
+    flex-direction: column;
+  }
+  .accueil section .container-card .card__content__text {
+    text-align: center;
+  }
+  main {
+    width: 60%;
+    margin: auto;
+    height: auto;
+  }
+  main .container {
+    border-radius: 45px;
+  }
+  main .card:hover {
+    cursor: pointer;
+  }
+  main .card:hover .card__add {
+    width: 50%;
+  }
+  main .card:hover .fa-circle-check {
+    color: #fff;
+    transform: rotate(360deg);
+  }
+  .footer {
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+  .footer .logo {
+    font-size: 2.5rem;
+  }
+  .footer__resto, .footer__partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
