@@ -511,19 +511,20 @@ main {
 //=====================================================================//
 @media screen and (min-width: 769px) { 
     //===== Media Queries Accueil =====//
-    .accueil {
-        .heading {
-            &__logo {
-            display: flex;
-            width: 60%; 
-            margin: 30px auto;       
-            box-shadow: none
-            }
-            &__background-img {
-            height: 500px;
-            }
+    
+    .heading {
+        &__logo {
+        display: flex;
+        width: 60%; 
+        margin: 30px auto;       
+        box-shadow: none
         }
+        &__background-img {
+        height: 500px;
+        }
+    }
 
+    .accueil {
         .reservation__btn {
             width: 30%;
         }
