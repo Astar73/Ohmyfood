@@ -66,8 +66,10 @@ $anim-delay: $anim-dur / 4;
     background-color: $colour-white;
     opacity: 95%;
     z-index: 1;
-    transition: transform 0s 3s;
-    transform: scaleX(0);
+    animation-name: loader-fade;
+    animation-duration: 3000ms;
+    animation-delay: 0ms;
+    animation-fill-mode: both;
         &__dot {
         width: 25px;
         height: 25px;
@@ -80,6 +82,17 @@ $anim-delay: $anim-dur / 4;
                 animation-delay: $anim-delay * $anim-dot;
             }
         }
+    }
+}
+
+@keyframes loader-fade {
+    99% {
+        transform: scaleX(1);
+        opacity: 95%;                
+    }
+    100% {
+        transform: scaleX(0);
+        opacity: 0;
     }
 }
 
