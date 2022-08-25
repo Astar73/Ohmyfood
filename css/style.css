@@ -280,11 +280,11 @@ section {
   transform: scaleY(0);
 }
 
-.heart:hover::before {
+.heart:active::before {
   transform: scaleY(0);
 }
 
-.heart:hover::after {
+.heart:active::after {
   transform: scaleY(0.95);
 }
 
@@ -320,7 +320,7 @@ footer a {
 main {
   position: relative;
   height: auto;
-  bottom: 50px;
+  bottom: 40px;
 }
 main .container {
   background-color: #f2f2f2;
@@ -472,6 +472,12 @@ main .reservation__btn {
   .heart {
     right: unset;
   }
+  .heart:hover::before {
+    transform: scaleY(0);
+  }
+  .heart:hover::after {
+    transform: scaleY(0.95);
+  }
   .accueil .reservation__btn {
     width: 30%;
   }
@@ -528,9 +534,6 @@ main .reservation__btn {
   }
   main .container {
     border-radius: 45px;
-  }
-  main .heart {
-    right: unset;
   }
   main .card:hover {
     cursor: pointer;

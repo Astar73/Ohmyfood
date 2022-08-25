@@ -331,11 +331,11 @@ section {
     transform: scaleY(0);
 }
 
-.heart:hover::before {
+.heart:active::before {
     transform: scaleY(0);
 }
 
-.heart:hover::after {
+.heart:active::after {
     transform: scaleY(0.95); 
 }
 //===== Début Animation Like-btn =====//
@@ -386,7 +386,7 @@ footer a {
 main {
     position: relative;
     height: auto;
-    bottom: 50px;
+    bottom: 40px;
 
     .container {
         @include background();
@@ -565,6 +565,14 @@ main {
         right: unset;
     }
 
+    .heart:hover::before {
+        transform: scaleY(0);
+    }
+    
+    .heart:hover::after {
+        transform: scaleY(0.95); 
+    }
+
     .accueil {
         .reservation__btn {
             width: 30%;
@@ -627,11 +635,7 @@ main {
 
         .container {
             border-radius: 45px;
-        }
-
-        .heart {
-            right: unset;
-        }
+        }        
 
         .card {
             &:hover {
