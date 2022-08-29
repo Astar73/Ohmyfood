@@ -315,7 +315,7 @@ main .menu__title {
   margin: 50px 20px 0px;
   padding-bottom: 10px;
   border-bottom: 4px solid #99E2D0;
-  width: 10%;
+  width: 40px;
 }
 main .card {
   display: flex;
