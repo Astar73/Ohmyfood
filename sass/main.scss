@@ -179,6 +179,7 @@ a {
         background: $background-rose;
         @include shadow(); 
         &:hover {
+            cursor: pointer;
             opacity: 0.85;
             box-shadow: $colour-tertiary 0px 3px 7px;
         }  
@@ -199,7 +200,7 @@ aside {
     width: 88%;
     margin: 20px 0px 20px 32px;
     font-size: 1rem;
-    padding: 30px 85px;
+    padding: 30px 15px 30px 85px;
     border: none;
     border-radius: 20px;
     align-items: center;
@@ -283,13 +284,11 @@ section {
         padding: 10px;
         font-size: 1.2rem;
         &__text {
-            width: 100%; 
             color: darken($color: $colour-white, $amount: 100%);           
         }         
     }
     &__title {
-        font-weight: 900;
-        font-size: 1.3rem;
+        font-weight: bold;
         margin: 5px;
     }
     &__description {
@@ -303,7 +302,7 @@ section {
 
 //===== Début Animation Like-btn =====//
 .fa-heart {
-    font-size: 1.8rem;  
+    font-size: 1.6rem;  
     font-weight: bolder;
     transform: scale(1);
     transition: transform 0.5s;
@@ -374,6 +373,7 @@ main {
 
     .container-heading {
         display: flex;
+        justify-content: space-between;
         font-family: 'Shrikhand', cursive;
         font-size: 1.9rem;
         padding: 40px 20px 0px;
@@ -394,60 +394,59 @@ main {
         background-color: $colour-white;
         animation: fadein 1900ms forwards ease-in-out;
         opacity: 0;
+        overflow: hidden;
         &:hover {
             cursor: pointer;
         }
         &:active {
             .card__add {
-                width: 50%;
+                width: 40%;
             }
             .fa-circle-check {
-                color: $colour-white;
                 transform: rotate(360deg);
             }
         }
         &__add {
-            width: 0%;
-            height: 70px;
+            width: 25px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            background-color: $colour-tertiary;
-            border-radius: 0 15px 15px 0;
-            transition: 0.3s linear 0s;
-            & .fa-circle-check {
-                font-size: 1.8rem;
-                color: transparent;
-                transition: transform 500ms 100ms ease-in-out;
+            transition: linear 500ms;
+            &__price {
+                font-size: 1rem;
+                font-weight: bold;
+                margin-right: 12px;
             }
-        }
-        &__title {
-            font-size: 1.1rem;
-            font-weight: bold;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        &__description {
-            width: 90%;
-            font-size: 0.9rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            &__check {                
+                background-color: $colour-tertiary;
+                padding: 25px 200px 25px 25px;
+                & .fa-circle-check {
+                    font-size: 1.8rem;
+                    color: $colour-white;
+                    transition: transform 500ms ease-out;
+                }
+            }            
         }
         &__content {
-            width: 100%;
+            width: 100%;            
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             &__text {
-                width: 80%;
+                overflow: hidden;
             }
-            &__price {
-                display: flex;
-                align-items: flex-end;
-                font-size: 1.1rem;
-                font-weight: bold;
-                margin: 5px;
-            }
-        }        
+        } 
+        &__title {
+            font-size: 1rem;
+            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 5px;
+        }
+        &__description {
+            font-size: 0.9rem;
+            text-overflow: ellipsis; 
+            overflow: hidden;           
+        }
     }
     
     .container-btn {
@@ -598,17 +597,16 @@ main {
             border-radius: 45px;
         }        
 
-        .card {
-            &:hover {
+        .card {            
+            /*&:hover {
                 cursor: pointer;
                 .card__add {
                     width: 50%;
                 }
                 .fa-circle-check {
-                    color: $colour-white;
                     transform: rotate(360deg);
                 }
-            }
+            }*/
         }
     }
     //===== Fin Media Queries Menus =====//

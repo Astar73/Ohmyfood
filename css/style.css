@@ -134,6 +134,7 @@ a {
   box-shadow: #d9d9d9 0px 7px 10px;
 }
 .reservation__btn:hover {
+  cursor: pointer;
   opacity: 0.85;
   box-shadow: #99E2D0 0px 3px 7px;
 }
@@ -154,7 +155,7 @@ aside {
   width: 88%;
   margin: 20px 0px 20px 32px;
   font-size: 1rem;
-  padding: 30px 85px;
+  padding: 30px 15px 30px 85px;
   border: none;
   border-radius: 20px;
   align-items: center;
@@ -238,12 +239,10 @@ section {
   font-size: 1.2rem;
 }
 .card__content__text {
-  width: 100%;
   color: black;
 }
 .card__title {
-  font-weight: 900;
-  font-size: 1.3rem;
+  font-weight: bold;
   margin: 5px;
 }
 .card__description {
@@ -251,7 +250,7 @@ section {
 }
 
 .fa-heart {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bolder;
   transform: scale(1);
   transition: transform 0.5s;
@@ -306,6 +305,7 @@ main .container {
 }
 main .container-heading {
   display: flex;
+  justify-content: space-between;
   font-family: "Shrikhand", cursive;
   font-size: 1.9rem;
   padding: 40px 20px 0px;
@@ -324,58 +324,57 @@ main .card {
   background-color: #fff;
   animation: fadein 1900ms forwards ease-in-out;
   opacity: 0;
+  overflow: hidden;
 }
 main .card:hover {
   cursor: pointer;
 }
 main .card:active .card__add {
-  width: 50%;
+  width: 40%;
 }
 main .card:active .fa-circle-check {
-  color: #fff;
   transform: rotate(360deg);
 }
 main .card__add {
-  width: 0%;
-  height: 70px;
+  width: 25px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #99E2D0;
-  border-radius: 0 15px 15px 0;
-  transition: 0.3s linear 0s;
+  transition: linear 500ms;
 }
-main .card__add .fa-circle-check {
-  font-size: 1.8rem;
-  color: transparent;
-  transition: transform 500ms 100ms ease-in-out;
-}
-main .card__title {
-  font-size: 1.1rem;
+main .card__add__price {
+  font-size: 1rem;
   font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-right: 12px;
 }
-main .card__description {
-  width: 90%;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+main .card__add__check {
+  background-color: #99E2D0;
+  padding: 25px 200px 25px 25px;
+}
+main .card__add__check .fa-circle-check {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 500ms ease-out;
 }
 main .card__content {
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .card__content__text {
-  width: 80%;
+  overflow: hidden;
 }
-main .card__content__price {
-  display: flex;
-  align-items: flex-end;
-  font-size: 1.1rem;
+main .card__title {
+  font-size: 1rem;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 5px;
+}
+main .card__description {
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main .container-btn {
   display: flex;
@@ -500,15 +499,16 @@ main .reservation__btn {
   main .container {
     border-radius: 45px;
   }
-  main .card:hover {
-    cursor: pointer;
-  }
-  main .card:hover .card__add {
-    width: 50%;
-  }
-  main .card:hover .fa-circle-check {
-    color: #fff;
-    transform: rotate(360deg);
+  main .card {
+    /*&:hover {
+        cursor: pointer;
+        .card__add {
+            width: 50%;
+        }
+        .fa-circle-check {
+            transform: rotate(360deg);
+        }
+    }*/
   }
   .footer {
     height: 100px;
