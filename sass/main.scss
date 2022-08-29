@@ -141,18 +141,22 @@ body {
     }
 }
 
-.location-container {
+form {
+    @include background($colour-white, 10%);
+    box-shadow: darken($colour-white, 25%) 0px 7px 10px inset;       
     display: flex;
     justify-content: center;
-    padding: 25px 125px 25px 100px;
-    align-items: baseline;
-    @include background($colour-white, 10%);
-    &__city {      
+    padding: 10px;
+    align-items: baseline;       
+    .fa-location-dot {
+        padding: 15px
+    }
+    #search {
+        @include background($colour-white, 10%);
+        border: none;
         font-size: 1.1rem;
-        margin-left: 10px;
-        font-weight: bold;
-        color: darken($color: $colour-white, $amount: 75%);
-    } 
+        width: 150px;
+    }
 }
 
 .reservation {

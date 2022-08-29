@@ -92,18 +92,22 @@ body a {
   object-fit: cover;
 }
 
-.location-container {
+form {
+  background-color: #e6e6e6;
+  box-shadow: #bfbfbf 0px 7px 10px inset;
   display: flex;
   justify-content: center;
-  padding: 25px 125px 25px 100px;
+  padding: 10px;
   align-items: baseline;
-  background-color: #e6e6e6;
 }
-.location-container__city {
+form .fa-location-dot {
+  padding: 15px;
+}
+form #search {
+  background-color: #e6e6e6;
+  border: none;
   font-size: 1.1rem;
-  margin-left: 10px;
-  font-weight: bold;
-  color: #404040;
+  width: 150px;
 }
 
 .reservation {
