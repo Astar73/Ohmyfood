@@ -224,11 +224,15 @@ aside {
     &__text {
         font-weight: bold;
     }
+    &:hover {
+        cursor: pointer;
+    }
     &:active {
         @include background(lightness-shift($colour-primary), 0%);
         @include shadow($colour-white, 0px 12px 15px);
-        color: $colour-primary;      
+        color: $colour-primary; 
     }
+    
 }
 
 section {
@@ -298,46 +302,7 @@ section {
 
 
 //===== Début Animation Like-btn =====//
-.heart {    
-    background: url("../images/coeur.png") no-repeat center;
-    background-size: contain;    
-    display: block;
-    height: 25px;
-    width: 25px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
 
-.heart::before, .heart::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;    
-    right: 0;
-    left: 0;
-    bottom: 1px;
-    transform-origin: bottom;
-    transition: transform 1s ease-out;
-}
-
-.heart:before{
-    background: white;
-    transform-origin: top;
-  }
-
-.heart::after {
-    background: $background-rose;
-    transform: scaleY(0);
-}
-
-.heart:active::before {
-    transform: scaleY(0);
-}
-
-.heart:active::after {
-    transform: scaleY(0.95); 
-}
 //===== Début Animation Like-btn =====//
 
 

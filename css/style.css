@@ -179,6 +179,9 @@ aside {
 .btn__text {
   font-weight: bold;
 }
+.btn:hover {
+  cursor: pointer;
+}
 .btn:active {
   background-color: #f2eafb;
   box-shadow: #d9d9d9 0px 12px 15px;
@@ -245,47 +248,6 @@ section {
 }
 .card__description {
   margin: 5px;
-}
-
-.heart {
-  background: url("../images/coeur.png") no-repeat center;
-  background-size: contain;
-  display: block;
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.heart::before, .heart::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 1px;
-  transform-origin: bottom;
-  transition: transform 1s ease-out;
-}
-
-.heart:before {
-  background: white;
-  transform-origin: top;
-}
-
-.heart::after {
-  background: linear-gradient(355deg, #9356DC, #FF79DA);
-  transform: scaleY(0);
-}
-
-.heart:active::before {
-  transform: scaleY(0);
-}
-
-.heart:active::after {
-  transform: scaleY(0.95);
 }
 
 .footer {
