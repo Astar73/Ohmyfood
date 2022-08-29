@@ -123,18 +123,21 @@ a {
     text-decoration: none;
 }
 
-.heading {
-    &__logo {
-        background-color: $colour-white; 
-        padding: 25px 115px 15px 115px;
-        @include shadow($colour-white, 0px 5px 5px);
-        }
+.heading {    
+    &__top {
+        display: flex;
+        align-items: center;
+    }
     &__btn-return {
-        position: absolute;
-        top: 32px;
-        left: 30px;
+        position: absolute;        
+        left: 15px;
         font-size: 1.5rem;
         color: black;
+    }
+    &__logo {
+        background-color: $colour-white; 
+        padding: 25px 50px;
+        @include shadow($colour-white, 0px 5px 5px);
     }
     &__background-img {
         height: 300px;
@@ -340,9 +343,10 @@ section {
 
 .logo {
     font-family: 'Shrikhand', cursive;
-    font-size: 1.2rem;
+    font-size: 2rem;
     padding: 10px 0px;
     &--white {
+        font-size: 1.2rem;
         color: $colour-white;
     }
 }
@@ -371,7 +375,7 @@ main {
         border-radius: 45px 45px 0px 0px;
     }
 
-    .container-heading {
+    .container-title {
         display: flex;
         justify-content: space-between;
         font-family: 'Shrikhand', cursive;
@@ -615,10 +619,7 @@ main {
         height: 100px;
         display: flex;
         justify-content: space-evenly;
-        align-items: flex-end;
-        .logo {
-            font-size: 2.5rem;
-        }
+        align-items: flex-end;      
         &__resto, &__partner {
             display: flex;
             flex-direction: column;
