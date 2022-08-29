@@ -388,9 +388,39 @@ main {
         height: 70px;
         margin: 15px;
         background-color: $colour-white;
-        animation: fadein 1900ms forwards ease-in-out;
+        animation: fadein 1900ms forwards ease-in-out;        
         opacity: 0;
         overflow: hidden;
+        &.fadein--1{
+            animation-delay: 100ms;
+        }
+        &.fadein--2{
+            animation-delay: 300ms;
+        }
+        &.fadein--3 {
+            animation-delay: 500ms;
+        }
+        &.fadein--4 {
+            animation-delay: 700ms;
+        }
+        &.fadein--5 {
+            animation-delay: 900ms;
+        }
+        &.fadein--6 {
+            animation-delay: 1100ms;
+        }
+        &.fadein--7 {
+            animation-delay: 1300ms;
+        }
+        &.fadein--8 {
+            animation-delay: 1500ms;
+        }
+        &.fadein--9 {
+            animation-delay: 1700ms;
+        }
+        &.fadein--10 {
+            animation-delay: 1900ms;
+        }
         &:hover {
             cursor: pointer;
         }
@@ -454,42 +484,6 @@ main {
     }
 }
 
-
-
-
-
-//===== Début Animation FadeIn =====//
-.fadein--1{
-    animation-delay: 100ms;
-}
-.fadein--2{
-    animation-delay: 300ms;
-}
-.fadein--3 {
-    animation-delay: 500ms;
-}
-.fadein--4 {
-    animation-delay: 700ms;
-}
-.fadein--5 {
-    animation-delay: 900ms;
-}
-.fadein--6 {
-    animation-delay: 1100ms;
-}
-.fadein--7 {
-    animation-delay: 1300ms;
-}
-.fadein--8 {
-    animation-delay: 1500ms;
-}
-.fadein--9 {
-    animation-delay: 1700ms;
-}
-.fadein--10 {
-    animation-delay: 1900ms;
-}
-
 @keyframes fadein {
     0% {
         transform: translateY(20px);
@@ -499,14 +493,9 @@ main {
         opacity:1;
     }
 }
-//===== Fin Animation FadeIn =====//
 //==========================================================//
 //===================== Fin des MENUS  =====================//
 //==========================================================//
-
-
-
-
 
 
 
