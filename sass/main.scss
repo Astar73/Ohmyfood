@@ -60,7 +60,7 @@ $anim-delay: $anim-dur / 4;
     display: flex;
     justify-content: center;
     align-items: center;    
-    position: absolute;
+    position: fixed;
     background-color: $colour-white;
     opacity: 95%;
     z-index: 1;
