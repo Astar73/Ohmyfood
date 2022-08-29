@@ -302,7 +302,21 @@ section {
 
 
 //===== Début Animation Like-btn =====//
-
+.fa-heart {
+    font-size: 1.8rem;  
+    font-weight: bolder;
+    transform: scale(1);
+    transition: transform 0.5s;
+    &:hover {
+        font-weight: bold;
+        background: $background-rose;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color:transparent;
+        transform: scale(1.2);
+        transition: transform 0.5s;
+    }
+}
 //===== Début Animation Like-btn =====//
 
 
@@ -357,12 +371,6 @@ main {
         @include background();
         border-radius: 45px 45px 0px 0px;
     }
-
-    .heart {
-        bottom: unset;
-        right: 20px;
-    }
-
 
     .container-heading {
         display: flex;
@@ -524,18 +532,6 @@ main {
         &__background-img {
         height: 500px;
         }
-    }
-
-    .heart {
-        right: unset;
-    }
-
-    .heart:hover::before {
-        transform: scaleY(0);
-    }
-    
-    .heart:hover::after {
-        transform: scaleY(0.95); 
     }
 
     .accueil {
