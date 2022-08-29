@@ -426,7 +426,8 @@ main {
         }
         &:active {
             .card__add {
-                width: 40%;
+                transition: width 1000ms forwards ease-in-out;
+                width: 100px;
             }
             .fa-circle-check {
                 transform: rotate(360deg);

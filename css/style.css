@@ -364,7 +364,8 @@ main .card:hover {
   cursor: pointer;
 }
 main .card:active .card__add {
-  width: 40%;
+  transition: width 1000ms forwards ease-in-out;
+  width: 100px;
 }
 main .card:active .fa-circle-check {
   transform: rotate(360deg);
