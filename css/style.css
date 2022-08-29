@@ -373,7 +373,7 @@ main .card__add {
   width: 25px;
   display: flex;
   align-items: center;
-  transition: linear 800ms;
+  transition: linear 500ms;
 }
 main .card__add__price {
   font-size: 1rem;
