@@ -66,18 +66,16 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-
-img {
+body img {
   width: 100%;
-  height: auto;
 }
-
-a {
+body a {
   text-decoration: none;
 }
 
 .heading__top {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .heading__btn-return {
@@ -87,9 +85,7 @@ a {
   color: black;
 }
 .heading__logo {
-  background-color: #fff;
-  padding: 25px 50px;
-  box-shadow: #d9d9d9 0px 5px 5px;
+  padding: 15px 50px;
 }
 .heading__background-img {
   height: 300px;

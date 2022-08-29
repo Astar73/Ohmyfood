@@ -52,9 +52,7 @@ $anim-delay: $anim-dur / 4;
 
 
 
-//===========================================================//
-//====================== Début Accueil ======================//
-//===========================================================//
+
 //===== Début Animation Loader =====//
 .loader {
     height: 100%;
@@ -109,24 +107,24 @@ $anim-delay: $anim-dur / 4;
 
 
 
-
+//===========================================================//
+//====================== Début Accueil ======================//
+//===========================================================//
 body {
     font-family: 'Roboto', sans-serif;
+    img {
+        width: 100%;
+    }
+    a {    
+        text-decoration: none;
+    }
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
-
-a {    
-    text-decoration: none;
-}
-
-.heading {    
+.heading {
     &__top {
         display: flex;
-        align-items: center;
+        justify-content: center;
+        align-items: center;        
     }
     &__btn-return {
         position: absolute;        
@@ -134,10 +132,8 @@ a {
         font-size: 1.5rem;
         color: black;
     }
-    &__logo {
-        background-color: $colour-white; 
-        padding: 25px 50px;
-        @include shadow($colour-white, 0px 5px 5px);
+    &__logo {        
+        padding: 15px 50px;
     }
     &__background-img {
         height: 300px;
@@ -299,10 +295,6 @@ section {
     }
 }
 
-
-
-
-
 //===== Début Animation Like-btn =====//
 .fa-heart {
     font-size: 1.6rem;  
@@ -320,10 +312,6 @@ section {
     }
 }
 //===== Début Animation Like-btn =====//
-
-
-
-
 
 .footer {
     height: 250px;
