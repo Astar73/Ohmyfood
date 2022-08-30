@@ -229,7 +229,14 @@ section {
   margin: auto;
   border-radius: 15px;
   background-color: #fff;
+  transform: scale(1);
   box-shadow: #d9d9d9 0px 7px 10px;
+}
+.card:hover {
+  transform: scale(1.005);
+}
+.card:active {
+  color: #9356DC;
 }
 .card__image {
   border-radius: 15px 15px 0 0;
@@ -298,6 +305,11 @@ section {
 
 footer a {
   color: #fff;
+  transform: scale(1);
+}
+footer a:hover {
+  color: #99E2D0;
+  transform: scale(1.02);
 }
 
 main {
@@ -491,6 +503,9 @@ main .reservation__btn {
     width: 60%;
     margin: auto;
     height: auto;
+  }
+  main .reservation__btn {
+    width: 30%;
   }
   main .container {
     border-radius: 45px;

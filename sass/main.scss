@@ -277,6 +277,13 @@ section {
     margin: auto;
     border-radius: 15px;
     background-color: $colour-white;
+    transform: scale(1);
+    &:hover {
+        transform: scale(1.005);      
+    }
+    &:active {        
+        color: $colour-primary;
+    }
     @include shadow();    
     &__image {
         border-radius: 15px 15px 0 0;
@@ -348,6 +355,12 @@ section {
 
 footer a {
     color: $colour-white;
+    transform: scale(1);
+    &:hover {
+        color: $colour-tertiary;
+        transform: scale(1.02);
+    }
+      
 }
 //===========================================================//
 //======================= Fin Accueil =======================//
@@ -580,6 +593,10 @@ main {
         width: 60%;
         margin: auto;
         height: auto;
+
+        .reservation__btn {
+            width: 30%;
+        }
 
         .container {
             border-radius: 45px;
