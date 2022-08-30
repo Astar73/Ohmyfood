@@ -119,7 +119,7 @@ img {
 }
 
 a {    
-    text-decoration: none;
+    text-decoration: none;    
 }
 
 
@@ -441,9 +441,10 @@ main {
             cursor: pointer;
         }
         &:active {
+            color: black;
             .card__add {
                 width: 100px;
-                transition: linear 400ms;
+                transition: linear 400ms;                
             }
             .fa-circle-check {
                 transform: rotate(360deg);
@@ -611,8 +612,7 @@ main {
                 .fa-circle-check {
                     transform: rotate(360deg);
                 }
-            }
-            
+            }            
         }
     }
     //===== Fin Media Queries Menus =====//
