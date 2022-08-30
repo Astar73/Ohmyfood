@@ -112,13 +112,16 @@ $anim-delay: $anim-dur / 4;
 //===========================================================//
 body {
     font-family: 'Roboto', sans-serif;
-    img {
-        width: 100%;
-    }
-    a {    
-        text-decoration: none;
-    }
 }
+
+img {
+    width: 100%;
+}
+
+a {    
+    text-decoration: none;
+}
+
 
 .heading {
     &__top {
@@ -580,7 +583,20 @@ main {
 
         .container {
             border-radius: 45px;
-        }           
+        }
+        
+        .card {
+            &:hover {           
+                .card__add {
+                    width: 100px;
+                    transition: linear 400ms;
+                }
+                .fa-circle-check {
+                    transform: rotate(360deg);
+                }
+            }
+            
+        }
     }
     //===== Fin Media Queries Menus =====//
 

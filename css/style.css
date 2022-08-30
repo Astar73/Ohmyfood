@@ -66,10 +66,12 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-body img {
+
+img {
   width: 100%;
 }
-body a {
+
+a {
   text-decoration: none;
 }
 
@@ -492,6 +494,13 @@ main .reservation__btn {
   }
   main .container {
     border-radius: 45px;
+  }
+  main .card:hover .card__add {
+    width: 100px;
+    transition: linear 400ms;
+  }
+  main .card:hover .fa-circle-check {
+    transform: rotate(360deg);
   }
   .footer {
     height: 100px;
