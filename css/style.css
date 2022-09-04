@@ -376,6 +376,14 @@ main .card.fadein--10 {
 }
 main .card:hover {
   cursor: pointer;
+  color: black;
+}
+main .card:hover .card__add {
+  width: 100px;
+  transition: linear 400ms;
+}
+main .card:hover .fa-circle-check {
+  transform: rotate(360deg);
 }
 main .card:active {
   color: black;

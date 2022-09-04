@@ -439,6 +439,14 @@ main {
         }
         &:hover {
             cursor: pointer;
+            color: black;
+            .card__add {
+                width: 100px;
+                transition: linear 400ms;                
+            }
+            .fa-circle-check {
+                transform: rotate(360deg);
+            }
         }
         &:active {
             color: black;
