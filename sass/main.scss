@@ -233,13 +233,10 @@ aside {
     }
     &:hover {
         cursor: pointer;
-    }
-    &:active {
         @include background(lightness-shift($colour-primary), 0%);
         @include shadow($colour-white, 0px 12px 15px);
         color: $colour-primary; 
-    }
-    
+    }    
 }
 
 section {
