@@ -315,6 +315,7 @@ section {
     font-weight: bolder;
     transform: scale(1);
     transition: transform 0.5s;
+    color: black;
     &:hover {
         font-weight: bold;
         background: $background-rose;
@@ -393,10 +394,17 @@ main {
 
     .menu__title {
         font-size: 1.1rem;
-        margin: 50px 20px 0px;
-        padding-bottom: 10px;
-        border-bottom: 4px solid $colour-tertiary;
-        width: 40px;
+        margin: 50px 20px 0px;        
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: $colour-tertiary;
+            height: 4px;
+            padding-bottom: 10px;
+            width: 40px;
+            bottom: 0;
+        }
     }
 
     .card {
