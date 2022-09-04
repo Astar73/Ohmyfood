@@ -394,14 +394,14 @@ main {
 
     .menu__title {
         font-size: 1.1rem;
-        margin: 50px 20px 0px;        
+        margin: 50px 20px 0px; 
+        padding-bottom: 10px;       
         position: relative;
         &::before {
             content: "";
             position: absolute;
             background-color: $colour-tertiary;
             height: 4px;
-            padding-bottom: 10px;
             width: 40px;
             bottom: 0;
         }

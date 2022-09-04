@@ -332,6 +332,7 @@ main .container-title {
 main .menu__title {
   font-size: 1.1rem;
   margin: 50px 20px 0px;
+  padding-bottom: 10px;
   position: relative;
 }
 main .menu__title::before {
@@ -339,7 +340,6 @@ main .menu__title::before {
   position: absolute;
   background-color: #99E2D0;
   height: 4px;
-  padding-bottom: 10px;
   width: 40px;
   bottom: 0;
 }
