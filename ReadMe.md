@@ -62,12 +62,12 @@ des points de suspension.
 
 #### Identité graphique
 **Polices**
-Logo et titres : Shrikhand
-Texte : Roboto
+* Logo et titres : Shrikhand
+* Texte : Roboto
 **Couleurs**
-Primaire : #9356DC
-Secondaire : #FF79DA
-Tertiaire : #99E2D0
+* Primaire : #9356DC
+* Secondaire : #FF79DA
+* Tertiaire : #99E2D0
 
 #### Technologies
 * Le développement doit se faire en CSS, sans JavaScript.
