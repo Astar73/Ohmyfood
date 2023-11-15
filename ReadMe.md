@@ -2,9 +2,7 @@
 
 Projet P3 du parcours de Developpeur Web d'OpenClassRoom
 
-## Consigne du projet :
-
-### Spécifications fonctionnelles :
+## Spécifications fonctionnelles :
 
 #### Page d’accueil (x1)
 * Affichage de la localisation des restaurants. À terme, il sera possible de choisir sa
@@ -58,7 +56,7 @@ la droite vers la gauche. Pour cette première version, l’effet peut apparaît
 sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il devra être rogné avec
 des points de suspension.
 
-### Spécifications techniques :
+## Spécifications techniques :
 
 #### Identité graphique
 **Polices**
